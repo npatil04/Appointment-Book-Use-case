@@ -1,0 +1,18 @@
+package com.example.appointmentsystem;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+@SpringBootApplication
+public class AppointmentSystemApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppointmentSystemApplication.class, args);
+		System.out.println("Project started");
+		
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+	    System.out.println(encoder.encode("password"));
+	}
+
+}
